@@ -14,11 +14,11 @@ golpesRyu = 0
 golpesKen = 0
 vencedor = ""
 while ryuHp > 0 and kenHp > 0:
-    golpe = int(input(''))
+    golpe = int(input(""))
     if golpe > 0:
         kenHp = kenHp - golpe
         golpesRyu = golpesRyu + 1
-        print("RYU APLICOU UM GOLPE", golpe)
+        print("RYU APLICOU UM GOLPE:", golpe)
 
         if kenHp <= 0:
             kenHp = 0
@@ -28,13 +28,13 @@ while ryuHp > 0 and kenHp > 0:
         ryuHp = ryuHp - golpe
         golpesKen = golpesKen + 1
 
-        print("KEN APLICOU UM GOLPE", golpe)
+        print("KEN APLICOU UM GOLPE:", golpe)
         if ryuHp <= 0:
             ryuHp = 0
             vencedor = "KEN"
 
-    print("HP RYU", ryuHp)
-    print("HP KEN", kenHp)
+    print("HP RYU =", ryuHp)
+    print("HP KEN =", kenHp)
 
 # Impressão do vencedor e do número de golpes aplicados
 print('LUTADOR VENCEDOR:', vencedor)
