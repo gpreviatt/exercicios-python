@@ -6,13 +6,16 @@
 ###################################################
 
 # Leitura do hp dos lutadores
+
 ryuHp = int(input())
 kenHp = int(input())
 
 # Leitura da sequência de golpes
+
 golpesRyu = 0
 golpesKen = 0
 vencedor = ""
+
 while ryuHp > 0 and kenHp > 0:
     golpe = int(input())
     if golpe > 0:
@@ -37,6 +40,7 @@ while ryuHp > 0 and kenHp > 0:
     print("HP KEN =", kenHp)
 
 # Impressão do vencedor e do número de golpes aplicados
+
 print('LUTADOR VENCEDOR:', vencedor)
 print('GOLPRES RYU =' , golpesRyu)
 print('GOLPRES KEN =', golpesKen)
