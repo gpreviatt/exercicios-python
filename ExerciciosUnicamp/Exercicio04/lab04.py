@@ -6,15 +6,15 @@
 ###################################################
 
 # Leitura do hp dos lutadores
-ryuHp = int(input("Digite o HP do RYU "))
-kenHp = int(input("Digite o HP do KEN "))
+ryuHp = int(input())
+kenHp = int(input())
 
 # Leitura da sequência de golpes
 golpesRyu = 0
 golpesKen = 0
 vencedor = ""
 while ryuHp > 0 and kenHp > 0:
-    golpe = int(input(""))
+    golpe = int(input())
     if golpe > 0:
         kenHp = kenHp - golpe
         golpesRyu = golpesRyu + 1

@@ -24,15 +24,9 @@ Exemplos de entradas e saídas esperadas pelo seu programa:
 
 Entrada
 
-
-80
-50
-15
--15
-20
--20
-15
-
+```
+80 50 15 -15 20 -20 15
+```
 
 Saída
 
@@ -60,7 +54,9 @@ GOLPES KEN = 2
 ## Teste 02
 Entrada
 
+```
 70 80 -20 15 -15 -20 20 15 10 -20
+```
 
 Saída
 
@@ -98,7 +94,9 @@ GOLPES KEN = 4
 
 Entrada
 
+```
 90 60 15 15 -10 10 10 10
+```
 
 Saída
 
