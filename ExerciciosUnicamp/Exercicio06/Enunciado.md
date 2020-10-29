@@ -1,16 +1,10 @@
 # De Volta para o Passado
 
-Depois de vários anos de pesquisa, seu velho amigo Doutor Lloyd finalmente criou a tão esperada máquina do tempo. Como você tem uma amizade de longa data com o Doutor Lloyd, ele te convidou para fazer os primeiros testes na máquina.
-
-Com a possibilidade de viajar no tempo, você pensou em voltar para o passado e apostar em eventos que já conhecia os resultados. Inicialmente, pensou em levar um almanaque esportivo, porém ganhar dinheiro com apostas levaria um certo tempo. Sendo assim, você optou por comprar ações de uma empresa de tecnologia e vender após alguns dias, já que sabia os valores das ações em diversos dias.
-
-Como você sabe programar, resolveu criar um programa para auxiliar na compra e venda das ações da empresa. Primeiramente, o seu programa receberá um valor N, indicando o número de dias que você tem registro do preço das ações, sendo que N sempre será menor ou igual a 30. Nas próximas N linhas, serão lidos os preços diários das ações. Na sequência, será lido um valor K, indicando o número máximo de dias permitido entre a compra e venda da ação. Por fim, o seu programa deverá ler um valor Q, indicando a quantidade de dinheiro que você levará na viagem.
+Primeiramente, o seu programa receberá um valor N, indicando o número de dias que você tem registro do preço das ações, sendo que N sempre será menor ou igual a 30. Nas próximas N linhas, serão lidos os preços diários das ações. Na sequência, será lido um valor K, indicando o número máximo de dias permitido entre a compra e venda da ação. Por fim, o seu programa deverá ler um valor Q, indicando a quantidade de dinheiro que você levará na viagem.
 
 Você deverá comprar ações em um único dia e deverá vender ações em um único dia, de modo que tenha o maior lucro possível. As ações são vendidas por inteiro, ou seja, não é possível comprar partes de uma ação. Você deve sempre comprar a maior quantidade possível de ações.
 
 A saída deverá conter o dia e o valor de compra de cada ação, o dia e valor de venda de cada ação, a quantidade de ações compradas e o lucro total obtido. Em caso de empate, deverá ser escolhido o menor dia de compra e o menor dia de venda.
-
-Exemplos de entradas e saídas esperadas pelo seu programa:
 
 ## Teste 01
 
