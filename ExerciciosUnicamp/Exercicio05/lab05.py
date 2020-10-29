@@ -7,36 +7,10 @@
 
 # Leitura de dados
 
-# n1 = int(input())
-# n2 = n1
-# n3 = int(input())
-# n4 = int(input())
-# n5 = n4
-# n6 = int(input())
-
-# teste 01
-# n1 = 1
-# n3 = 3
-# n4 = 40
-# n6 = 42
-
-# teste 02
-# n1 = 8
-# n3 = 12
-# n4 = 35
-# n6 = 39
-
-# teste 03
-n1 = 15
-n3 = 25
-n4 = 40
-n6 = 48
-
-# test arq 05
-# n1 = 9
-# n3 = 13
-# n4 = 26
-# n6 = 36
+n1 = int(input())
+n3 = int(input())
+n4 = int(input())
+n6 = int(input())
 
 # Impressão dos quatro números fornecidos como entrada
 
@@ -50,17 +24,18 @@ print("Sexto:", "{:02}".format(n6))
 print("Lista de apostas:")
 
 for i in range(n1,n3):
-    n5 = n4
-    if (n1%2 == 0 and i%2 == 0) or (n1%2 != 0 and i%2 != 0):
+    # regra impar ou par
+    if (n1%2 and i%2) or (not n1%2 and not i%2):
         continue
-    else:
-        n2 = i
+    n2 = i
+    n5 = n4
     for n in range(n4, n6):
-        if (n4%2 == 0 and n%2 == 0) or (n4%2 != 0 and n%2 != 0):
+        # regra par ou impar
+        if (n4%2 and n%2) or (not n4%2 and not n%2):
             continue
         n5 = n
 
-        # Verifica se a somatoria dos numeros NÃO é um multiplo de 7 ou 13
-        sum = n1 + n2 + n3 + n4 + n5
+        # exibe se a somatoria dos numeros NÃO é um multiplo de 7 ou 13
+        sum = n1 + n2 + n3 + n4 + n5 + n6
         if (sum%7) and (sum%13):
             print("{:02} - {:02} - {:02} - {:02} - {:02} - {:02}".format(n1, n2, n3, n4, n5, n6))
