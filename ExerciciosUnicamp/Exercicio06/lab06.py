@@ -24,25 +24,22 @@ for i in range(1, n + 1):
         dia_venda = i
 
 k = int(input("Diferença de Dias: "))
-q = float(input("Total investido: "))
+q = int(input("Total investido: "))
 
 # Escolha da melhor variação de valores da ação
 
-dia_compra = 0
-valor_compra = 0
-
-
+valor_compra = 0.0
+dia_compra = 1
 # Percorre a lista para ver qual o melhor dia de compra das ações
-for i in range(1, dia_venda):
-    if valores[i] < valor_compra or valor_compra == 0:
+for i in range(1, dia_venda + 1):
+    if (valores[i] < valor_compra) or (not valor_compra) or (dia_venda - i == k):
         valor_compra = valores[i]
         dia_compra = i
-    if (dia_venda - dia_compra) == k:
-        valor_compra = valores[i]
-        dia_compra = i
+    if (dia_venda - i) == k:
         break
 
-qtde_acoes = q / valor_compra
+# arredonda para baixo
+qtde_acoes = int(q / valor_compra)
 lucro = (qtde_acoes * valor_venda) - q
 
 # Saída de dados
@@ -51,5 +48,5 @@ print('Dia da compra:', dia_compra)
 print('Valor de compra: R$', format(valor_compra, '.2f').replace('.', ','))
 print('Dia da venda:', dia_venda)
 print('Valor de venda: R$', format(valor_venda, '.2f').replace('.', ','))
-print('Quantidade de acoes compradas:', format(qtde_acoes, '.2f').replace('.', ','))
+print('Quantidade de acoes compradas:', format(qtde_acoes, '.0f'))
 print('Lucro: R$', format(lucro, '.2f').replace('.', ','))
