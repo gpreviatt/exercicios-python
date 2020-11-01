@@ -7,7 +7,7 @@
 
 # Leitura de dados
 
-n = int(input("Dias: "))
+n = int(input())
 while n > 30:
     print("n = {} nao pode ser maior que 30 tente novamente".format(n))
     n = int(input())
@@ -18,29 +18,32 @@ dia_venda = 0
 valor_venda = 0
 
 for i in range(1, n + 1):
-    valores[i] = float(input("Cotação: "))
+    valores[i] = float(input())
     if valor_venda < valores[i]:
         valor_venda = valores[i]
         dia_venda = i
 
-k = int(input("Diferença de Dias: "))
-q = int(input("Total investido: "))
+k = int(input())
+q = float(input())
 
 # Escolha da melhor variação de valores da ação
 
 valor_compra = 0.0
 dia_compra = 1
-# Percorre a lista para ver qual o melhor dia de compra das ações
-for i in range(1, dia_venda + 1):
-    if (valores[i] < valor_compra) or (not valor_compra) or (dia_venda - i == k):
-        valor_compra = valores[i]
-        dia_compra = i
-    if (dia_venda - i) == k:
-        break
 
-# arredonda para baixo
+if dia_venda == 1:
+    dia_compra = dia_venda
+    valor_compra = valor_venda
+else : 
+    for i in range(dia_venda, (dia_venda - 1) - k, -1):
+        if valores[i] < valor_compra or valor_compra == 0.0:
+            valor_compra = valores[i]
+            dia_compra = i
+
 qtde_acoes = int(q / valor_compra)
 lucro = (qtde_acoes * valor_venda) - q
+if lucro < 0:
+    lucro = 0
 
 # Saída de dados
 
