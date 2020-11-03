@@ -41,9 +41,7 @@ else :
             dia_compra = i
 
 qtde_acoes = int(q / valor_compra)
-lucro = (qtde_acoes * valor_venda) - q
-if lucro < 0:
-    lucro = 0
+lucro = (valor_venda - valor_compra) * qtde_acoes
 
 # Saída de dados
 
