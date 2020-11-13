@@ -16,29 +16,24 @@ valores = {}
 
 dia_venda = 0
 valor_venda = 0
+valor_compra = 0.0
+dia_compra = 1
 
 for i in range(1, n + 1):
     valores[i] = float(input())
-    if valor_venda < valores[i]:
-        valor_venda = valores[i]
-        dia_venda = i
+    if valor_compra > valores[i]:
+        valor_compra = valores[i]
+        dia_compra = i
 
 k = int(input())
 q = float(input())
 
 # Escolha da melhor variação de valores da ação
 
-valor_compra = 0.0
-dia_compra = 1
-
-if dia_venda == 1:
-    dia_compra = dia_venda
-    valor_compra = valor_venda
-else : 
-    for i in range(dia_venda, (dia_venda - 1) - k, -1):
-        if valores[i] < valor_compra or valor_compra == 0.0:
-            valor_compra = valores[i]
-            dia_compra = i
+for i in range(1, len(valores)):
+    if valores[i] > valor_venda and dia_compra + i <= k :
+        valor_venda = valores[i]
+        dia_venda = i
 
 qtde_acoes = int(q / valor_compra)
 lucro = (valor_venda - valor_compra) * qtde_acoes
